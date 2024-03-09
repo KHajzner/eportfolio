@@ -1,25 +1,21 @@
 import { useForm } from "react-hook-form"
 
+
 const AddProject = () => {
   const {
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = async (data) => {
-    var request = require('request');
-        var clientServerOptions = {
-              uri: 'http://localhost:5000/api',
-              body: JSON.stringify(data),
-              method: 'POST',
-              headers: {
-               'Content-Type': 'application/json'
-              }
-              }
-        request(clientServerOptions, function (error, response) {
-        console.log(error,response.body);
-        return;
+  const onSubmit = async data => {
+      const response = await fetch('http://localhost:5000/api', {
+        method: 'post',
+        mode: 'cors',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}
       });
+      const data2 = await response.json();
+      console.log(data2);
         
   }
 
