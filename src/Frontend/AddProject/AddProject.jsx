@@ -1,15 +1,27 @@
 import { useForm } from "react-hook-form"
 
-
-export const AddProject = () => {
+const AddProject = () => {
   const {
     handleSubmit,
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => {
-      console.log(data);
-    }
+  const onSubmit = async (data) => {
+    var request = require('request');
+        var clientServerOptions = {
+              uri: 'http://localhost:5000/api',
+              body: JSON.stringify(data),
+              method: 'POST',
+              headers: {
+               'Content-Type': 'application/json'
+              }
+              }
+        request(clientServerOptions, function (error, response) {
+        console.log(error,response.body);
+        return;
+      });
+        
+  }
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
@@ -25,3 +37,5 @@ export const AddProject = () => {
     </form>
   )
 }
+
+export default AddProject;
