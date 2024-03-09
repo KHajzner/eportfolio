@@ -1,0 +1,14 @@
+.card{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #1E1C21;
+}
+#title{
+    background-color: #FBFB4B;
+    text-align: center;
+    font-size: 30px;
+}
+
+#description{
+    background-color: #FAFAFF;
+}

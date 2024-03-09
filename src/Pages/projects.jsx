@@ -1,5 +1,7 @@
+import { ProjectCard } from "../Frontend/ProjectCard/ProjectCard";
+
 const Projects = () => {
-    return <h1>Projects</h1>;
+    return (<ProjectCard/>);
   };
   
-  export default Projects;
+export default Projects;
