@@ -1,5 +1,4 @@
-import { useForm } from "react-hook-form"
-
+import { useForm } from "react-hook-form";
 
 const AddProject = () => {
   const {
