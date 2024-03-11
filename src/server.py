@@ -20,7 +20,7 @@ if __name__ == '__main__':
     from extensions import db
     db.init_app(app)
 
-    from Backend.Projects.AddProject import projects_blueprint
+    from Backend.Projects.Projects import projects_blueprint
     app.register_blueprint(projects_blueprint)
 
     app.run()
