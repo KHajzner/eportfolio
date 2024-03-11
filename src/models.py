@@ -8,6 +8,9 @@ class Projects(db.Model):
     title = db.Column(db.String(255), nullable=False)
     description = db.Column(db.String(255), nullable=False)
 
+    def toDict(self):
+        return dict(id=self.id, title=self.title, description=self.description)
+    
     def __init__(self, title, description):
         self.title = title
         self.description = description
