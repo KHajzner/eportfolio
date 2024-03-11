@@ -15,7 +15,3 @@ def init_db():
     with app.app_context():
         db.drop_all()
         db.create_all()
-        new_project = Projects(title='TESTTLE', description='descritioasjojaiwenojnsdihaiwjnkdjwnakebaebaee')
-        db.session.add(new_project)
-        print("Added new project")
-        db.session.commit()
