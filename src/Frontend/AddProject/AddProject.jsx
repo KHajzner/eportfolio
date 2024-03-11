@@ -8,7 +8,7 @@ const AddProject = () => {
   } = useForm()
 
   const onSubmit = async data => {
-      await fetch('http://localhost:5000/addproject', {
+    await fetch('http://localhost:5000/addproject', {
       method: 'post',
       mode: 'cors',
       body: JSON.stringify(data),

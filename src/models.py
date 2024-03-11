@@ -1,4 +1,5 @@
-from server import db, app
+from server import app
+from extensions import db
 
 class Projects(db.Model):
     __tablename__ = 'Projects'
@@ -13,5 +14,6 @@ class Projects(db.Model):
 
 def init_db():
     with app.app_context():
+        db.init_app(app)
         db.drop_all()
         db.create_all()

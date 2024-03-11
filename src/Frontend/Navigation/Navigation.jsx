@@ -7,7 +7,7 @@ import './Navigation.css'
 const Navigation = () => {
     return (
         <div>
-            <div class="links">
+            <div className="links">
                 <Link to="/">
                         K.Hajzner
                     </Link>
