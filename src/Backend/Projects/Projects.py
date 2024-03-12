@@ -1,9 +1,8 @@
 from extensions import db
 from flask import request,  Blueprint
 from flask_cors import cross_origin
-from models import Projects
+from Backend.Projects.ProjectsModel import Projects
 import json
-
 
 projects_blueprint = Blueprint('projects', __name__)
 

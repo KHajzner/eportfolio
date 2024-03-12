@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -21,6 +20,9 @@ if __name__ == '__main__':
     db.init_app(app)
 
     from Backend.Projects.Projects import projects_blueprint
+    from Backend.Posts.Posts import posts_blueprint
+
     app.register_blueprint(projects_blueprint)
+    app.register_blueprint(posts_blueprint)
 
     app.run()

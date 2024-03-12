@@ -6,4 +6,4 @@ export default {
   component: ProjectCard,
 };
 
-export const Hello = {};
+export const projectCard = {};

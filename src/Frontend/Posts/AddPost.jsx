@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-const AddProject = () => {
+const AddPost = () => {
   const {
     register,
     handleSubmit,
@@ -8,7 +8,7 @@ const AddProject = () => {
   } = useForm()
 
   const onSubmit = async data => {
-    await fetch('http://localhost:5000/addproject', {
+    await fetch('http://localhost:5000/addpost', {
       method: 'post',
       mode: 'cors',
       body: JSON.stringify(data),
@@ -32,4 +32,4 @@ const AddProject = () => {
   )
 }
 
-export default AddProject;
+export default AddPost;

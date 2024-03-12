@@ -15,7 +15,7 @@ class Projects(db.Model):
         self.title = title
         self.description = description
 
-def init_db():
+def init_projects():
     with app.app_context():
         db.init_app(app)
         db.drop_all()

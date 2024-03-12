@@ -1,5 +1,5 @@
 import { ProjectCard } from "../Frontend/Projects/ProjectCard";
-import AddProject from "../Frontend/ProjectCard/AddProject";
+import AddProject from "../Frontend/Projects/AddProject";
 import { useState, useEffect } from "react";
 
 const Projects = () => {
