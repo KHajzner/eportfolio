@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
-import { Editor } from "react-draft-wysiwyg";
-import { EditorState } from 'draft-js';
+// import { Editor } from "react-draft-wysiwyg";
+import { EditorState, RichUtils, Editor } from 'draft-js';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { convertToHTML } from 'draft-convert';
 
@@ -43,11 +43,8 @@ const AddPost = () => {
       <input placeholder="Title" {...register("title")}/>
       <label>Description</label>
       <Editor
-        editorState={editorState}
-        onEditorStateChange={setEditorState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
+ editorState={editorState} onChange={setEditorState}
+        
       />
       {errors.exampleRequired && <span>This field is required</span>}
 
