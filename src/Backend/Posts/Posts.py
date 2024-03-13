@@ -27,8 +27,6 @@ def allPosts():
     response = []
     for post in allPosts:
         post = post.toDict()
-        post = post['body'].decode('utf-8')
+        post['body'] = post['body'].decode('utf-8')
         response.append(post)
-    # response = json.loads(response)
-    print(response)
-    return (json.dumps(response), 200)
+    return (response, 200)

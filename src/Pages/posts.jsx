@@ -20,7 +20,7 @@ const Posts = () => {
       console.error("Error fetching data: ", error);
     })
   }, [])
-  console.log(allPosts)
+
   return (
   <div>
     <AddPost />
