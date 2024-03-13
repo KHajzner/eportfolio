@@ -20,12 +20,12 @@ const Posts = () => {
       console.error("Error fetching data: ", error);
     })
   }, [])
-
+  console.log(allPosts)
   return (
   <div>
     <AddPost />
     {allPosts && <div> {allPosts.map((post) => (
-          <PostCard title={post.title} description={post.description}/>
+          <PostCard title={post.title} description={post.body}/>
         ))}
         </div>
       }

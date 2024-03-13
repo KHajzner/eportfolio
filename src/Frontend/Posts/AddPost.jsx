@@ -1,4 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { Editor } from "react-draft-wysiwyg";
+import { ContentState, convertToRaw } from 'draft-js';
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const AddPost = () => {
   const {
@@ -7,11 +11,18 @@ const AddPost = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = async data => {
+  const _contentState = ContentState.createFromText('Sample content state');
+  const raw = convertToRaw(_contentState);  // RawDraftContentState JSON
+  const [contentState, setContentState] = useState(raw); // ContentState JSON
+
+  const onSubmit = async title => {
+    var formData = {title: title.title, body: contentState};
+    formData = JSON.stringify(formData);
+
     await fetch('http://localhost:5000/addpost', {
       method: 'post',
       mode: 'cors',
-      body: JSON.stringify(data),
+      body: formData,
       headers: {'Content-Type': 'application/json'}
     });
   }
@@ -23,8 +34,12 @@ const AddPost = () => {
       <label>Title</label>
       <input placeholder="Title" {...register("title")}/>
       <label>Description</label>
-      <input placeholder="Description" {...register("description")}/>
-
+      {/* <input placeholder="Description" {...register("description")}/> */}
+      <Editor    defaultContentState={contentState}
+        onContentStateChange={setContentState}
+        wrapperClassName="wrapper-class"
+        editorClassName="editor-class"
+        toolbarClassName="toolbar-class"/>;
       {errors.exampleRequired && <span>This field is required</span>}
 
       <input type="submit" />

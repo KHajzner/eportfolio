@@ -1,19 +1,22 @@
 from server import app
 from extensions import db
+from datetime import datetime
 
 class Posts(db.Model):
     __tablename__ = 'Posts'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)
-    description = db.Column(db.String(255), nullable=False)
+    body = db.Column(db.BLOB)
+    date = db.Column(db.DateTime, nullable=False)
 
     def toDict(self):
-        return dict(id=self.id, title=self.title, description=self.description)
+        return dict(id=self.id, title=self.title, body=self.body)
     
-    def __init__(self, title, description):
+    def __init__(self, title, body):
         self.title = title
-        self.description = description
+        self.body = body
+        self.date = datetime.now()
 
 def init_posts():
     with app.app_context():

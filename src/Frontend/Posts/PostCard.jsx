@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './PostCard.css';
 
+
 //Navigation component
 export const PostCard = ({title, description}) => {
     return (
