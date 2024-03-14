@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { EditorState, RichUtils, Editor } from 'draft-js';
 import { convertToHTML } from 'draft-convert';
 import InFormEditor from "../Editor/InFormEditor";
-
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 const AddPost = () => {
   const {
     register,
@@ -16,9 +17,9 @@ const AddPost = () => {
   const getBodyData = (data) => {
     setBodyData(data);
   }
-
+  const [value, setValue] = useState('');
   const onSubmit = async title => {
-    var formData = {title: title.title, body: bodyData};
+    var formData = {title: title.title, body: value};
     formData = JSON.stringify(formData);
 
     await fetch('http://localhost:5000/addpost', {
@@ -28,7 +29,13 @@ const AddPost = () => {
       headers: {'Content-Type': 'application/json'}
     });
   }
-
+const modules = {toolbar:[
+  [{ 'header': [1, 2, false] }],
+  ['bold', 'italic', 'underline','strike', 'blockquote'],
+  [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+  ['link', 'image'],
+  ['clean']
+],}
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -36,7 +43,7 @@ const AddPost = () => {
       <label>Title</label>
       <input placeholder="Title" {...register("title")}/>
       <label>Description</label>
-
+      <ReactQuill theme="snow" value={value} onChange={setValue} modules={modules}/>;
       <InFormEditor onBodyDataRequest={getBodyData}/>
       {errors.exampleRequired && <span>This field is required</span>}
 
