@@ -20,10 +20,6 @@ def addProject():
 @cross_origin()
 def allPosts():
     allPosts = Posts.query.all()
-    # for post in allPosts:
-    #     post['body'] = json.loads(post['body'].decode('utf-8'))
-    #     print(post)
-    # response = [x.toDict() for x in allPosts]
     response = []
     for post in allPosts:
         post = post.toDict()

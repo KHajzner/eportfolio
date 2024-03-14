@@ -12,7 +12,8 @@ export const PostCard = ({title, description}) => {
       }
     }
 
-    // TODO: Remove the quotation marks around description
+    // TODO: Remove the quotation marks around description 
+    // TODO: Images don't work
     return (
       <div>
           <div className="card">
