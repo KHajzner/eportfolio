@@ -1,6 +1,5 @@
-import { ProjectCard } from "../Frontend/Projects/ProjectCard";
-import AddProject from "../Frontend/Projects/AddProject";
 import { useState, useEffect } from "react";
+import { Card } from "../Frontend/Card/Card";
 
 const Projects = () => {
   const [allProjects, setAllProjects] = useState(null);
@@ -24,7 +23,7 @@ const Projects = () => {
     return (
     <div>
     {allProjects && <div> {allProjects.map((post) => (
-          <ProjectCard title={post.title} description={post.body}/>
+          <Card title={post.title} description={post.body}/>
         ))}
         </div>
       }

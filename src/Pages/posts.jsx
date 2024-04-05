@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import AddPost from "../Frontend/Posts/AddPost";
-import { PostCard } from "../Frontend/Posts/PostCard";
+import { Card } from "../Frontend/Card/Card";
 
 const Posts = () => {
   const [allPosts, setAllPosts] = useState(null);
@@ -24,7 +23,7 @@ const Posts = () => {
   return (
   <div>
     {allPosts && <div> {allPosts.map((post) => (
-          <PostCard title={post.title} description={post.body}/>
+          <Card title={post.title} description={post.body}/>
         ))}
         </div>
       }

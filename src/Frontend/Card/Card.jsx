@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './PostCard.css';
+import './Card.css';
 import DOMPurify from 'dompurify';
 
 //Navigation component
-export const PostCard = ({title, description}) => {
+export const Card = ({title, description}) => {
 
     const createMarkup = (html) => {
       return {
@@ -12,8 +12,6 @@ export const PostCard = ({title, description}) => {
       }
     }
 
-    // TODO: Remove the quotation marks around description 
-    // TODO: Images don't work
     return (
       <div>
           <div className="card">
@@ -25,13 +23,13 @@ export const PostCard = ({title, description}) => {
   );
 };
 
-PostCard.propTypes = {
+Card.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
 
 };
 
-PostCard.defaultProps = {
+Card.defaultProps = {
   title: "uwu",
   description: "this is the title",
 };
