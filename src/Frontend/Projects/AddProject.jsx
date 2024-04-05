@@ -2,7 +2,8 @@ import { useForm } from "react-hook-form";
 import { useState,  } from "react";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-
+import { Button
+ } from "../Button/Button";
 const AddProject = () => {
   const {
     register,
@@ -48,17 +49,17 @@ const AddProject = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} id="addProject">
 
       <label>Title</label>
       <input placeholder="Title" {...register("title")}/>
 
       <label>Description</label>
-      <ReactQuill theme="snow" value={body} onChange={setBody} modules={modules}/>;
+      <ReactQuill theme="snow" value={body} onChange={setBody} modules={modules}/>
 
       {errors.exampleRequired && <span>This field is required</span>}
 
-      <input type="submit" />
+      <Button type="submit" form="addProject" name="Submit" />
     </form>
   )
 }

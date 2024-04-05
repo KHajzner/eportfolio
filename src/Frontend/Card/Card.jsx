@@ -15,7 +15,7 @@ export const Card = ({date, title, description}) => {
 
     return (
       <div class="grid-item" id="card">
-            <div id="date">{format(date, 'dd.MM.yyyy')}</div>
+            {date && <div id="date">{format(date, 'dd.MM.yyyy')}</div>}
             <div className="content">
                 <div id="title">{title}</div>
                 <div id="break" />
@@ -26,8 +26,9 @@ export const Card = ({date, title, description}) => {
 };
 
 Card.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
+    date: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
 
 };
 
