@@ -23,7 +23,7 @@ const Posts = () => {
   return (
   <div>
     {allPosts && <div> {allPosts.map((post) => (
-          <Card title={post.title} description={post.body}/>
+          <Card date={post.date} title={post.title} description={post.body}/>
         ))}
         </div>
       }

@@ -22,8 +22,8 @@ const Projects = () => {
 
     return (
     <div>
-    {allProjects && <div> {allProjects.map((post) => (
-          <Card title={post.title} description={post.body}/>
+    {allProjects && <div> {allProjects.map((project) => (
+          <Card date={project.date} title={project.title} description={project.body}/>
         ))}
         </div>
       }

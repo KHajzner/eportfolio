@@ -20,8 +20,8 @@ def addProject():
 def allProjects():
     allProjects = Projects.query.all()
     response = []
-    for post in allProjects:
-        post = post.toDict()
-        post['body'] = post['body'].decode('utf-8')
-        response.append(post)
+    for project in allProjects:
+        project = project.toDict()
+        project['body'] = project['body'].decode('utf-8')
+        response.append(project)
     return (response, 200)

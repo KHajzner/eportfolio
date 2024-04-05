@@ -16,5 +16,6 @@ a:not(:last-child){
     background-color: #BF211E;
     padding: 10px;
     text-align: right;
+    margin-bottom: 20px;
 }
 

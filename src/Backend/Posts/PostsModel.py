@@ -11,7 +11,7 @@ class Posts(db.Model):
     date = db.Column(db.DateTime, nullable=False)
 
     def toDict(self):
-        return dict(id=self.id, title=self.title, body=self.body)
+        return dict(id=self.id, title=self.title, body=self.body, date=self.date)
     
     def __init__(self, title, body):
         self.title = title

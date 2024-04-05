@@ -1,12 +1,40 @@
 .card{
+    width: 250px;
+    margin-bottom: 20px;
+}
+.content{
     border: 1px solid #1E1C21;
+    background-color: #FAFAFF;
+    height: 125px;
 }
 #title{
-    background-color: #FBFB4B;
     text-align: center;
     font-size: 30px;
+    border-radius: 90%;
 }
-
+#break{
+    background-color: #F26419;
+    height: 3px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
 #description{
     background-color: #FAFAFF;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+#date{
+    background-color: #FAFAFF;
+    font-size: larger;
+    width: 35%;
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #1E1C21;
+    border-bottom: 0px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+
 }
