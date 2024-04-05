@@ -9,12 +9,9 @@ projects_blueprint = Blueprint('projects', __name__)
 @projects_blueprint.route('/addproject', methods=['GET', 'POST'])
 @cross_origin()
 def addProject():
-    print(request.json.get("title"))
-    print(request.json.get("description"))
-    new_project = Projects(title=request.json.get("title"), description=request.json.get("description"))
-
-    db.session.add(new_project)
-    db.session.commit()     
+    new_post = Projects(title=request.json.get("title"), body=str.encode(request.json.get("body")))
+    db.session.add(new_post)
+    db.session.commit() 
     print("Added project")
     return ("", 200)
 
@@ -22,6 +19,9 @@ def addProject():
 @cross_origin()
 def allProjects():
     allProjects = Projects.query.all()
-    print("Sending projects")
-    response = [x.toDict() for x in allProjects]
-    return (json.dumps(response), 200)
+    response = []
+    for post in allProjects:
+        post = post.toDict()
+        post['body'] = post['body'].decode('utf-8')
+        response.append(post)
+    return (response, 200)

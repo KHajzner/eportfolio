@@ -7,6 +7,8 @@ import Main from './Pages/main';
 import Posts from './Pages/posts';
 import Projects from './Pages/projects';
 import Footer from './Frontend/Footer/Footer';
+import AddPostPage from './Pages/addPost';
+import AddProjectPage from './Pages/addProject';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           <Route path="posts" element={<Posts />} />
           <Route path="projects" element={<Projects />} />
           <Route path="cv" element={<CV />} />
+          <Route path="addPost" element={<AddPostPage />} />
+          <Route path="addProject" element={<AddProjectPage />} />
         </Route>
       </Routes>
       <Footer/>

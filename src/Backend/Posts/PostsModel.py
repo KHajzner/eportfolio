@@ -18,6 +18,10 @@ class Posts(db.Model):
         self.body = body
         self.date = datetime.now()
 
+# To Initialise (in terminal):
+# python3
+# from Backend.Posts.PostsModel import init_posts
+# init_posts()
 def init_posts():
     with app.app_context():
         db.init_app(app)

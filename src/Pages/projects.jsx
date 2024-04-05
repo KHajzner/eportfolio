@@ -23,12 +23,11 @@ const Projects = () => {
 
     return (
     <div>
-      <AddProject />
-      {allProjects && <div> {allProjects.map((project) => (
-            <ProjectCard title={project.title} description={project.description}/>
-          ))}
-          </div>
-        }
+    {allProjects && <div> {allProjects.map((post) => (
+          <ProjectCard title={post.title} description={post.body}/>
+        ))}
+        </div>
+      }
     </div>);
   };
   
