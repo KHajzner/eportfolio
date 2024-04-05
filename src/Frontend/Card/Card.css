@@ -1,26 +1,34 @@
-.card{
+body{
+    background-color: #FAFAFF;
+    color: #1E1C21;
+}
+#card{
     width: 250px;
     margin-bottom: 20px;
 }
 .content{
-    border: 1px solid #1E1C21;
+    border: 2px solid #1e1c2175;
     background-color: #FAFAFF;
-    height: 125px;
+    height: 135px;
+    overflow: hidden;
 }
+
 #title{
     text-align: center;
     font-size: 30px;
     border-radius: 90%;
+    margin: 5px 0;
 }
+
 #break{
-    background-color: #F26419;
+    background-color: #BF211E;
     height: 3px;
     width: 80%;
     margin: 0 auto;
     
 }
+
 #description{
-    background-color: #FAFAFF;
     font-size: 20px;
     padding: 0 5px;
 }
@@ -32,9 +40,10 @@
     font-size: 15px;
     margin-left: 10px;
     padding: 5px;
-    border: 1px solid #1E1C21;
+    color: #1E1C21;
+    font-weight: 400;
+    border: 2px solid #1E1C21;
     border-bottom: 0px;
     border-radius: 5px 5px 0 0;
     text-align: center;
-
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "../Frontend/Card/Card";
+import './layouts.css';
 
 const Projects = () => {
   const [allProjects, setAllProjects] = useState(null);
@@ -22,8 +23,9 @@ const Projects = () => {
 
     return (
     <div>
-    {allProjects && <div> {allProjects.map((project) => (
-          <Card date={project.date} title={project.title} description={project.body}/>
+          <h1>Projects</h1>
+    {allProjects && <div class="grid-container"> {allProjects.map((project) => (
+          <Card class="grid-item" date={project.date} title={project.title} description={project.body}/>
         ))}
         </div>
       }

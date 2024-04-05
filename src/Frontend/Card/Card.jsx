@@ -14,7 +14,7 @@ export const Card = ({date, title, description}) => {
     }
 
     return (
-      <div className="card">
+      <div class="grid-item" id="card">
             <div id="date">{format(date, 'dd.MM.yyyy')}</div>
             <div className="content">
                 <div id="title">{title}</div>

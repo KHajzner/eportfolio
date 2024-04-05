@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "../Frontend/Card/Card";
+import './layouts.css';
 
 const Posts = () => {
   const [allPosts, setAllPosts] = useState(null);
@@ -22,7 +23,8 @@ const Posts = () => {
 
   return (
   <div>
-    {allPosts && <div> {allPosts.map((post) => (
+    <h1>Posts</h1>
+    {allPosts && <div class="grid-container" id="wholeGrid"> {allPosts.map((post) => (
           <Card date={post.date} title={post.title} description={post.body}/>
         ))}
         </div>
