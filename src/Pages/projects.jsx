@@ -35,7 +35,7 @@ const Projects = () => {
           <h1>Projects</h1>
           {allProjects && 
           <div class={view + "-container"}> {allProjects.map((project) => (
-          <Card class={view + "-item"} id={project.id} date={project.date} title={project.title} description={project.body}/>
+          <Card class={view + "-item"} layout={view} id={project.id} date={project.date} title={project.title} description={project.body}/>
         ))}
         </div>
       }

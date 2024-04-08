@@ -7,8 +7,8 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 //Navigation component
-export const Card = ({id, date, title, description}) => {
-
+export const Card = ({id, date, title, description, layout}) => {
+    const setLayout = layout ? layout : "grid"
     const createMarkup = (html) => {
       return {
         __html: DOMPurify.sanitize(html)
@@ -16,13 +16,13 @@ export const Card = ({id, date, title, description}) => {
     }
 
     return (
-      <div class="grid-item" id="card">
-            {date && <div id="date">{format(date, 'dd.MM.yyyy')}</div>}
-            <div className="content">
-                <div id="title"> 
+      <div class={setLayout +"-item"} id="card">
+            {date && <div id={setLayout +"-date"}>{format(date, 'dd.MM.yyyy')}</div>}
+            <div id={setLayout +"-content"}>
+                <div id={setLayout +"-title"}> 
                 <Link to={`view/${id}`}>{title}</Link></div>
-                <div id="break" />
-                <div id="description" dangerouslySetInnerHTML={createMarkup(description)}></div>
+                <div id={setLayout +"-break"} />
+                <div id={setLayout +"-description"} dangerouslySetInnerHTML={createMarkup(description)}></div>
             </div>
       </div>
   );
