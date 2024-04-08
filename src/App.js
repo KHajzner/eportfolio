@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./Frontend/Navigation/Navigation"
-import CV from './Pages/cv';
 import Main from './Pages/main';
 import Posts from './Pages/posts';
 import Footer from './Frontend/Footer/Footer';
 import AddPostPage from './Pages/addPost';
 import AddProjectPage from './Pages/addProject';
 import Projects from './Frontend/Projects/Projects';
+import CV from './Frontend/CV/CV';
 import { View } from './Frontend/View/View';
 
 

@@ -21,8 +21,10 @@ if __name__ == '__main__':
 
     from Backend.Projects.Projects import projects_blueprint
     from Backend.Posts.Posts import posts_blueprint
+    from Backend.CVs.CVs import cvs_blueprint
 
     app.register_blueprint(projects_blueprint)
     app.register_blueprint(posts_blueprint)
+    app.register_blueprint(cvs_blueprint)
 
     app.run()
