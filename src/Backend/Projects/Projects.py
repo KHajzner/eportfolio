@@ -25,3 +25,13 @@ def allProjects():
         project['body'] = project['body'].decode('utf-8')
         response.append(project)
     return (response, 200)
+
+@projects_blueprint.route('/view/<int:id>', methods=['GET', 'POST'])
+@cross_origin()
+def viewProject(id):
+    project = Projects.query.filter_by(id=id).first()
+    project = project.toDict()
+    project['body'] = project['body'].decode('utf-8')
+    if not project:
+        return (project, 500)
+    return (project, 200)

@@ -9,6 +9,7 @@ import Projects from './Pages/projects';
 import Footer from './Frontend/Footer/Footer';
 import AddPostPage from './Pages/addPost';
 import AddProjectPage from './Pages/addProject';
+import { View } from './Frontend/View/View';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="cv" element={<CV />} />
           <Route path="addPost" element={<AddPostPage />} />
           <Route path="addProject" element={<AddProjectPage />} />
+          <Route path="projects/view/:id" element={<View/>}
+        />
         </Route>
       </Routes>
       <Footer/>

@@ -25,7 +25,7 @@ const Projects = () => {
     <div>
           <h1>Projects</h1>
     {allProjects && <div class="grid-container"> {allProjects.map((project) => (
-          <Card class="grid-item" date={project.date} title={project.title} description={project.body}/>
+          <Card class="grid-item" id={project.id} date={project.date} title={project.title} description={project.body}/>
         ))}
         </div>
       }
