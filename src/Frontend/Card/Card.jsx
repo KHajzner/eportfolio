@@ -16,7 +16,7 @@ export const Card = ({id, date, title, description, layout}) => {
     }
 
     return (
-      <div class={setLayout +"-item"} id="card">
+      <div className={setLayout +"-item"} id="card">
             {date && <div id={setLayout +"-date"}>{format(date, 'dd.MM.yyyy')}</div>}
             <div id={setLayout +"-content"}>
                 <div id={setLayout +"-title"}> 

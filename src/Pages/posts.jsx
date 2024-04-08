@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Card } from "../Frontend/Card/Card";
-import './layouts.css';
 
 const Posts = () => {
   const [allPosts, setAllPosts] = useState(null);
