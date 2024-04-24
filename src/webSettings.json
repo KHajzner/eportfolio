@@ -2,7 +2,7 @@
     "Layouts": [
         {
             "PageName": "Projects",
-            "Type": null
+            "Type": "grid"
         },
         {
             "PageName": "Posts",

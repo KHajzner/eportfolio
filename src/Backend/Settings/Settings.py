@@ -17,7 +17,7 @@ def write_json_file(data, filePath):
 
 @settings_blueprint.route('/changeLayout', methods=['GET', 'POST'])
 @cross_origin()
-def addProject():
+def changeLayout():
     data = request.get_json()
     pageName = data.get('PageName')
     newType = data.get('Type')
@@ -31,4 +31,24 @@ def addProject():
     
     write_json_file(layoutsData, filePath)
     return jsonify(layoutsData)
+
+@settings_blueprint.route('/updateSocials', methods=['GET', 'POST'])
+@cross_origin()
+def updateSocials():
+    data = request.get_json()
+    socialsName = data.get('Name')
+    filePath = './Frontend/SocialMedia/mediaLinks.json'
+    socialData = read_json_file(filePath)
+
+    for social in socialData["SocialMedia"]:
+        print(social["Name"])
+        print(socialsName)
+        if social["Name"] in socialsName:
+            social["isVisible"] = True
+        else:
+            social["isVisible"] = False
+
+    
+    write_json_file(socialData, filePath)
+    return jsonify(socialData)
 

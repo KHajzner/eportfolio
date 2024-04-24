@@ -1,0 +1,53 @@
+{
+    "SocialMedia": [
+        {
+            "Name": "Instagram",
+            "Icon": "instagram.png",
+            "Link": "",
+            "isVisible": true,
+            "Author": "Freepik"
+        },
+        {
+            "Name": "LinkedIn",
+            "Icon": "linkedin.png",
+            "Link": "",
+            "isVisible": true,
+            "Author": "Freepik"
+        },
+        {
+            "Name": "GitHub",
+            "Icon": "github.png",
+            "Link": "",
+            "isVisible": false,
+            "Author": "Dave Gandy"
+        },
+        {
+            "Name": "GitLab",
+            "Icon": "gitlab.png",
+            "Link": "",
+            "isVisible": false,
+            "Author": "Freepik"
+        },
+        {
+            "Name": "X",
+            "Icon": "twitter.png",
+            "Link": "",
+            "isVisible": false,
+            "Author": "Freepik"
+        },
+        {
+            "Name": "Facebook",
+            "Icon": "facebook.png",
+            "Link": "",
+            "isVisible": true,
+            "Author": "Freepik"
+        },
+        {
+            "Name": "Email",
+            "Icon": "email.png",
+            "Link": "",
+            "isVisible": true,
+            "Author": "Freepik"
+        }
+    ]
+}

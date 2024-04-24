@@ -4,16 +4,6 @@ body{
     margin: 0;
     font-family:'Andale Mono', monospace;
 }
-a{
-    color: var(--white);
-    padding: 0px 20px;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-a:not(:last-child){
-    border-right: 2px solid var(--white);
-}
 .links{
     background-color:  var(--black);
     padding: 10px;
@@ -23,6 +13,17 @@ a:not(:last-child){
     top: 0;
     right: 0;
     width: 100%;
+    
+    a{
+        color: var(--white);
+        padding: 0px 20px;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    
+    a:not(:last-child){
+        border-right: 2px solid var(--white);
+    }
 }
 .navigation{
     background-color:  var(--black);
