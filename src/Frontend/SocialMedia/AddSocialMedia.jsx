@@ -8,38 +8,50 @@ const AddSocialMedia = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm()
 
-  // const [submittedMessage, setSubmittedMessage] = useState('');
-  // const [allSkills, setAllSkills] = useState(null);
+  const [checkedItems, setCheckedItems] = useState({});
+  const [confirmationMessage, setConfirmationMessage] = useState();
+
+  useEffect(() => {
+    const initialCheckedItems = {};
+    mediaLinks.SocialMedia.forEach(item => {
+      initialCheckedItems[item.Name] = item.isVisible;
+    });
+    setCheckedItems(initialCheckedItems);
+  }, []); 
 
   const onSubmit = socialsData => {
-    console.log(socialsData);
-    socialsData = JSON.stringify({Name: socialsData.socials});
-    console.log(socialsData);
+    let socialData = mediaLinks.SocialMedia.map(item => ({
+      Name: item.Name,
+      Link: socialsData[item.Name + 'Link'] || '', 
+      isVisible: !!socialsData[item.Name],
+    }));
+    console.log(socialData);
+    // socialData = JSON.stringify(socialData);
     fetch('http://localhost:5000/updateSocials', {
         method: 'post',
         mode: 'cors',
-        body:  socialsData,
+        body: JSON.stringify(socialData),
         headers: {'Content-Type': 'application/json'}
-    })
+    }).then(response => {if(response.ok){
+      setConfirmationMessage("Updated social media");
+      } else{
+        setConfirmationMessage("Error updating social media");
+      }
+    });
     }
-
-    useEffect(()=>{
-      // const projectsLayout = settings.Layouts.find(layout => layout.PageName === "Projects");
-      // if(projectsLayout) {
-      //   setView(projectsLayout.Type);
-      // }
-    })
-    
   return (
     <form onSubmit={handleSubmit(onSubmit)} id="updateSocials">
-        {/* {!!submittedMessage && <p>{submittedMessage}</p>} */}
-        {mediaLinks.SocialMedia.map((item) => (
+        {!!confirmationMessage && <p>{confirmationMessage}</p>}
+        {mediaLinks.SocialMedia.map((item, index) => (
             <>
-              <input type="checkbox" id={item.Name} name={item.Name} value={item.Name} {...register("socials")} /> 
-              <label for={item.Name}>{item.Name}</label> <br/>
+              <input type="checkbox" defaultChecked={item.isVisible} id={item.Name} name={item.Name} {...register(item.Name)} /> 
+              <label>{item.Name}</label>
+              {watch(item.Name) && (<input type="text" name={item.Name} placeholder={`Enter ${item.Name} URL`} {...register((item.Name + 'Link'), {value:item.Link} )} />
+          )}<br/>
             </>
             ))}
 

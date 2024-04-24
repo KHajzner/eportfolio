@@ -11,7 +11,7 @@ const Footer = () => {
         <footer>
             {socialMedia.SocialMedia.map((item) => (
             <>
-                {item.isVisible && <a href={item.Link}> <img src={require("../SocialMedia/Icons/" + item.Icon)} alt={`${item.Name} Icon`} /> </a>}
+                {item.isVisible && <a href={item.Name=="Email" ? "mailto:" : "http://" + item.Link}> <img src={require("../SocialMedia/Icons/" + item.Icon)} alt={`${item.Name} Icon`} /> </a>}
             </>
             ))}
         </footer>

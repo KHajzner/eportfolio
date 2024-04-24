@@ -36,19 +36,17 @@ def changeLayout():
 @cross_origin()
 def updateSocials():
     data = request.get_json()
-    socialsName = data.get('Name')
+    print(data)
     filePath = './Frontend/SocialMedia/mediaLinks.json'
     socialData = read_json_file(filePath)
 
-    for social in socialData["SocialMedia"]:
-        print(social["Name"])
-        print(socialsName)
-        if social["Name"] in socialsName:
-            social["isVisible"] = True
-        else:
-            social["isVisible"] = False
-
-    
+    for oldSocial in socialData["SocialMedia"]:
+        for newSocial in data:
+            if oldSocial["Name"] == newSocial["Name"]:
+                oldSocial["isVisible"] = newSocial["isVisible"]
+                if newSocial["Link"] != "":
+                    oldSocial["Link"] = newSocial["Link"]
+                break
     write_json_file(socialData, filePath)
     return jsonify(socialData)
 

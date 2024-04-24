@@ -4,50 +4,50 @@
             "Name": "Instagram",
             "Icon": "instagram.png",
             "Link": "",
-            "isVisible": true,
-            "Author": "Freepik"
+            "isVisible": false,
+            "IconAuthor": "Freepik"
         },
         {
             "Name": "LinkedIn",
             "Icon": "linkedin.png",
-            "Link": "",
+            "Link": "linkedin.com",
             "isVisible": true,
-            "Author": "Freepik"
+            "IconAuthor": "Freepik"
         },
         {
             "Name": "GitHub",
             "Icon": "github.png",
-            "Link": "",
+            "Link": "zaawea sd",
             "isVisible": false,
-            "Author": "Dave Gandy"
+            "IconAuthor": "Dave Gandy"
         },
         {
             "Name": "GitLab",
             "Icon": "gitlab.png",
             "Link": "",
             "isVisible": false,
-            "Author": "Freepik"
+            "IconAuthor": "Freepik"
         },
         {
             "Name": "X",
             "Icon": "twitter.png",
-            "Link": "",
+            "Link": "sd aweaew",
             "isVisible": false,
-            "Author": "Freepik"
+            "IconAuthor": "Freepik"
         },
         {
             "Name": "Facebook",
             "Icon": "facebook.png",
             "Link": "",
-            "isVisible": true,
-            "Author": "Freepik"
+            "isVisible": false,
+            "IconAuthor": "Freepik"
         },
         {
             "Name": "Email",
             "Icon": "email.png",
-            "Link": "",
+            "Link": "testemail@gmail.com",
             "isVisible": true,
-            "Author": "Freepik"
+            "IconAuthor": "Freepik"
         }
     ]
 }
