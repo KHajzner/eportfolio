@@ -23,10 +23,12 @@ if __name__ == '__main__':
     from Backend.Posts.Posts import posts_blueprint
     from Backend.CVs.CVs import cvs_blueprint
     from Backend.Settings.Settings import settings_blueprint
+    from Backend.Skills.Skills import skills_blueprint
 
     app.register_blueprint(projects_blueprint)
     app.register_blueprint(posts_blueprint)
     app.register_blueprint(cvs_blueprint)
     app.register_blueprint(settings_blueprint)
+    app.register_blueprint(skills_blueprint)
 
     app.run()

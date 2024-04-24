@@ -1,6 +1,7 @@
 import { Button } from "../Button/Button";
 import "./Settings.css";
 import SwitchLayout from "../Layout/SwitchLayout";
+import NewSkill from "../Skills/NewSkill";
 
 const Settings = () => {
 
@@ -10,6 +11,7 @@ const Settings = () => {
         <Button name="Add Post" type="button" redirect="addPost"></Button>
         <SwitchLayout pageName={"Projects"}/>
         <SwitchLayout pageName={"Posts"}/>
+        <NewSkill />
     </>
     );
 };
