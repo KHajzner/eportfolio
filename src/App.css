@@ -4,9 +4,7 @@
     --white: #FAFAFF;
 }
 a{
+    color: var(--white);
     transition: 0.25s;
     text-decoration: none;
-}
-a:hover{
-    opacity: 0.5;
 }
