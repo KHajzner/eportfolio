@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./Frontend/Navigation/Navigation"
-import Main from './Pages/main';
+import Main from './Frontend/Main/Main';
 import Posts from './Pages/posts';
 import Footer from './Frontend/Footer/Footer';
 import AddProject from './Frontend/Projects/AddProject';

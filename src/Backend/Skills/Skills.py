@@ -17,12 +17,11 @@ def newSkill():
 
 @skills_blueprint.route('/allSkills', methods=['GET', 'POST'])
 @cross_origin()
-def allProjects():
-    allProjects = Skills.query.all()
+def allSkills():
+    allSkills = Skills.query.all()
     response = []
-    for project in allProjects:
-        project = project.toDict()
-        project['body'] = project['body'].decode('utf-8')
-        response.append(project)
+    for skill in allSkills:
+        skill = skill.toDict()
+        response.append(skill)
     return (response, 200)
 
