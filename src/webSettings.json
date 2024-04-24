@@ -1,0 +1,12 @@
+{
+    "Layouts": [
+        {
+            "PageName": "Projects",
+            "Type": "list"
+        },
+        {
+            "PageName": "Posts",
+            "Type": "Grid"
+        }
+    ]
+}

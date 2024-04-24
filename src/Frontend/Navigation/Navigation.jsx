@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, Outlet } from "react-router-dom";
 import './Navigation.css'
 
-//Navigation component
 const Navigation = () => {
     return (
         <div className="navigation">

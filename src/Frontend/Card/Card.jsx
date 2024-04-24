@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import './Card.css';
 import DOMPurify from 'dompurify';
 import { format } from 'date-fns';
-import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
-//Navigation component
 export const Card = ({id, date, title, description, layout}) => {
     const setLayout = layout ? layout : "grid"
     const createMarkup = (html) => {

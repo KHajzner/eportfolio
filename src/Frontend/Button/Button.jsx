@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
-import DOMPurify from 'dompurify';
-import { format } from 'date-fns';
 import { useNavigate } from "react-router-dom";
 
-//Navigation component
 export const Button = ({form, type, name, redirect}) => {
   let navigate = useNavigate();
 
@@ -19,7 +16,6 @@ export const Button = ({form, type, name, redirect}) => {
       return;
     }
   }
-
     return (
       <div id="button">
         <button form={form} type={type} value={name} onClick={onClickRedirect}>{name}</button> 

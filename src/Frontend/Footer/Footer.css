@@ -1,7 +1,9 @@
+@import "../../App.css"; 
+
 footer{
     position: fixed;
     bottom:0;
-    background-color: #F26419;
+    background-color: var(--black);
     width: 100%;
     text-align: center;
 }

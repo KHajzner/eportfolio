@@ -1,10 +1,10 @@
 import { useForm} from "react-hook-form";
 import { useState, useEffect  } from "react";
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Button
  } from "../Button/Button";
  import { Document, Page } from 'react-pdf'
+
 const CV = () => {
   const {
     register,

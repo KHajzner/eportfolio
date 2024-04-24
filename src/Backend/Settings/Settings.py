@@ -6,38 +6,29 @@ import json
 
 settings_blueprint = Blueprint('settings', __name__)
 
-def read_json_file(file_path):
-    with open(file_path, 'r') as file:
+def read_json_file(filePath):
+    with open(filePath, 'r') as file:
         data = json.load(file)
     return data
 
-# Function to write JSON data to file
-def write_json_file(data, file_path):
-    with open(file_path, 'w') as file:
+def write_json_file(data, filePath):
+    with open(filePath, 'w') as file:
         json.dump(data, file, indent=4)
 
-@settings_blueprint.route('/changelayout', methods=['GET', 'POST'])
+@settings_blueprint.route('/changeLayout', methods=['GET', 'POST'])
 @cross_origin()
 def addProject():
     data = request.get_json()
-    print(data)
-    print("got request!")
-    layout_name = data.get('LayoutName')
-    new_type = data.get('Type')
+    pageName = data.get('PageName')
+    newType = data.get('Type')
+    filePath = 'webSettings.json'
+    layoutsData = read_json_file(filePath)
 
-    # Read JSON data from file
-    file_path = 'settings.json'
-    layouts_data = read_json_file(file_path)
-
-    # Find the layout by name and update its type
-    for layout in layouts_data["Layouts"]:
-        if layout["LayoutName"] == layout_name:
-            layout["Type"] = new_type
+    for layout in layoutsData["Layouts"]:
+        if layout["PageName"] == pageName:
+            layout["Type"] = newType
             break
-
-    # Write updated JSON data back to file
-    write_json_file(layouts_data, file_path)
-
-    # Return the updated JSON
-    return jsonify(layouts_data)
+    
+    write_json_file(layoutsData, filePath)
+    return jsonify(layoutsData)
 

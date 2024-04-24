@@ -1,20 +1,18 @@
 import { useState, useEffect } from "react";
 import { Card } from "../Card/Card";
 import './Projects.css';
-import { Button } from "../Button/Button";
 import { useForm } from "react-hook-form";
-import settings from '../../settings.json';
+import settings from '../../webSettings.json';
 
 const Projects = () => {
   const {
-    register,
-    handleSubmit,
     formState: { errors },
   } = useForm()
   const [allProjects, setAllProjects] = useState(null);
   const [view, setView] = useState("");
+
   useEffect(()=>{
-    const projectsLayout = settings.Layouts.find(layout => layout.LayoutName === "Projects");
+    const projectsLayout = settings.Layouts.find(layout => layout.PageName === "Projects");
     if(projectsLayout) {
       setView(projectsLayout.Type);
     }

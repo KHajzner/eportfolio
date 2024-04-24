@@ -3,3 +3,9 @@
     --black: #1E1C21;
     --white: #FAFAFF;
 }
+a{
+    transition: 0.25s;
+}
+a:hover{
+    opacity: 0.5;
+}
