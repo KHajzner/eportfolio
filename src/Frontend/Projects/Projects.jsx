@@ -3,7 +3,7 @@ import { Card } from "../Card/Card";
 import './Projects.css';
 import { Button } from "../Button/Button";
 import { useForm } from "react-hook-form";
-import SwitchLayout from "../SwitchLayout/SwitchLayout";
+import SwitchLayout from "../Layout/SwitchLayout";
 
 const Projects = () => {
   const {

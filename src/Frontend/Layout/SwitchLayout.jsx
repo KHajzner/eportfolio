@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-
+import './SwitchLayout.css';
 //Navigation component
 const SwitchLayout = (props) => {
     const {

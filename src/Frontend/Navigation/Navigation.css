@@ -1,22 +1,29 @@
+@import "../../App.css"; 
 body{
     padding: 0;
     margin: 0;
     font-family:'Andale Mono', monospace;
 }
 a{
-    color: #FAFAFF;
+    color: var(--white);
     padding: 0px 20px;
     font-size: 25px;
     text-decoration: none;
 }
 
 a:not(:last-child){
-    border-right: 2px solid #FAFAFF;
+    border-right: 2px solid var(--white);
 }
 .links{
-    background-color: #BF211E;
+    background-color:  var(--black);
     padding: 10px;
     text-align: right;
     margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
 }
-
+.navigation{
+    background-color:  var(--black);
+}

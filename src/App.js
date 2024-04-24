@@ -10,6 +10,7 @@ import AddProjectPage from './Pages/addProject';
 import Projects from './Frontend/Projects/Projects';
 import CV from './Frontend/CV/CV';
 import { View } from './Frontend/View/View';
+import Settings from './Frontend/Settings/Settings'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="posts" element={<Posts />} />
           <Route path="projects" element={<Projects />} />
           <Route path="cv" element={<CV />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="addPost" element={<AddPostPage />} />
           <Route path="addProject" element={<AddProjectPage />} />
           <Route path="projects/view/:id" element={<View/>}

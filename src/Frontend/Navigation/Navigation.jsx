@@ -6,7 +6,7 @@ import './Navigation.css'
 //Navigation component
 const Navigation = () => {
     return (
-        <div>
+        <div className="navigation">
             <div className="links">
                 <Link to="/">
                         K.Hajzner
@@ -19,6 +19,9 @@ const Navigation = () => {
                     </Link>
                     <Link to="/projects">
                         Projects
+                    </Link>
+                    <Link to="/settings">
+                        Settings
                     </Link>
             </div>
             <Outlet />

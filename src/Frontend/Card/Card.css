@@ -1,6 +1,8 @@
+@import "../../App.css"; 
+
 body{
-    background-color: #FAFAFF;
-    color: #1E1C21;
+    background-color:  var(--black);
+    color: var(--white);
 }
 
 #grid-card{
@@ -8,9 +10,9 @@ body{
     margin-bottom: 20px;
 }
 #grid-content{
-    border-top: 2px solid #1e1c21;
-    border-bottom:2px solid #1e1c21;
-    background-color: #FAFAFF;
+    border-top: 2px solid  var(--white);
+    border-bottom:2px solid  var(--white);
+    background-color: var(--black);
     height: 135px;
     overflow: hidden;
 }
@@ -20,12 +22,12 @@ body{
     font-size: 30px;
     margin: 5px 0;
     a{
-        color: #1E1C21;
+        color:  var(--white);
     }
 }
 
 #grid-break{
-    background-color: #BF211E;
+    background-color: var(--yellow);
     height: 3px;
     width: 80%;
     margin: 0 auto;
@@ -38,15 +40,14 @@ body{
 }
 
 #grid-date{
-    background-color: #FAFAFF;
+    background-color: var(--black);
     font-size: larger;
     width: 35%;
     font-size: 15px;
     margin-left: 10px;
     padding: 5px;
-    color: #1E1C21;
     font-weight: 400;
-    border: 2px solid #1E1C21;
+    border: 2px solid var(--white);
     border-bottom: 0px;
     border-radius: 5px 5px 0 0;
     text-align: center;
