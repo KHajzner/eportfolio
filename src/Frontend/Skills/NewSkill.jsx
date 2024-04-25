@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState,  } from "react";
 import { Button
  } from "../Button/Button";
+import "./NewSkill.css";
 
 const NewSkill = () => {
   const {
@@ -31,8 +32,8 @@ const NewSkill = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} id="addSkill">
         {!!submittedMessage && <p>{submittedMessage}</p>}
-        <label>Skill</label>
-        <input placeholder="Skill" {...register("skill")}/>
+        <label id="skillLabel">Skill</label>
+        <input type="text" placeholder="Skill" {...register("skill")}/>
         <Button type="submit" form="addSkill" name="Add" />
     </form>
   )

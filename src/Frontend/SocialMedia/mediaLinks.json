@@ -11,7 +11,7 @@
             "Name": "LinkedIn",
             "Icon": "linkedin.png",
             "Link": "linkedin.com",
-            "isVisible": true,
+            "isVisible": false,
             "IconAuthor": "Freepik"
         },
         {
@@ -32,7 +32,7 @@
             "Name": "X",
             "Icon": "twitter.png",
             "Link": "sd aweaew",
-            "isVisible": false,
+            "isVisible": true,
             "IconAuthor": "Freepik"
         },
         {
@@ -46,7 +46,7 @@
             "Name": "Email",
             "Icon": "email.png",
             "Link": "testemail@gmail.com",
-            "isVisible": true,
+            "isVisible": false,
             "IconAuthor": "Freepik"
         }
     ]

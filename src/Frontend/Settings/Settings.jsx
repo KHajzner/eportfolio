@@ -16,7 +16,14 @@ const Settings = () => {
     const ContentManagement = () => {
         return(
             <>
+                <div className="pageTitle">
+                    Content Management
+                    <div id="break"/>
+                </div>
+                <div id="grid-title">Projects</div> 
                 <Button name="Add Project" type="button" redirect="addProject"></Button>
+                <br/>
+                <div id="grid-title">Posts</div> 
                 <Button name="Add Post" type="button" redirect="addPost"></Button>
             </>
         );
@@ -24,6 +31,10 @@ const Settings = () => {
     const LayoutManagement = () => {
         return(
             <>
+                <div className="pageTitle">
+                    Layout Management
+                    <div id="break"/>
+                </div>
                 <SwitchLayout pageName={"Projects"}/>
                 <SwitchLayout pageName={"Posts"}/>
             </>
@@ -33,6 +44,10 @@ const Settings = () => {
     const Miscellaneous= () => {
         return(
             <>
+                <div className="pageTitle">
+                    Miscellaneous
+                    <div id="break"/>
+                </div>
                 <NewSkill />
                 <AddSocialMedia/>
             </>
@@ -45,13 +60,12 @@ const Settings = () => {
 
     return (
     <div className="settings">
-        <div className="pageTitle">Settings</div>
-        <div id="break"/>
         <Box sx={{ flexGrow: 1, display: 'flex'}}>
         <TabContext value={value}>
         <Tabs variant="scrollable" value={value} onChange={handleChange} orientation="vertical"
          textColor="inherit"
         sx={{ borderRight: 1, borderColor: 'divider' }}>
+            
                 <Tab label="Content" value="1" />
                 <Tab label="Layout" value="2" />
                 <Tab label="Other" value="3" />

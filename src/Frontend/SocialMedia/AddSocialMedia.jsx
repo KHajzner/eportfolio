@@ -3,6 +3,7 @@ import { useState,  useEffect } from "react";
 import { Button
  } from "../Button/Button";
 import mediaLinks from "./mediaLinks.json";
+import "./AddSocialMedia.css";
 
 const AddSocialMedia = () => {
   const {
@@ -46,15 +47,17 @@ const AddSocialMedia = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} id="updateSocials">
         {!!confirmationMessage && <p>{confirmationMessage}</p>}
+        <div id="allSocials">
         {mediaLinks.SocialMedia.map((item, index) => (
-            <>
-              <input type="checkbox" defaultChecked={item.isVisible} id={item.Name} name={item.Name} {...register(item.Name)} /> 
-              <label>{item.Name}</label>
-              {watch(item.Name) && (<input type="text" name={item.Name} placeholder={`Enter ${item.Name} URL`} {...register((item.Name + 'Link'), {value:item.Link} )} />
+            <div id="singleSocial">
+              <>
+              <input className="checkbox" type="checkbox" defaultChecked={item.isVisible} id={item.Name} name={item.Name} {...register(item.Name)} /> 
+              <label id="socialLabel">{item.Name}</label></>
+              {watch(item.Name) && (<input id="urlBox" type="text" name={item.Name} placeholder={`Enter ${item.Name} URL`} {...register((item.Name + 'Link'), {value:item.Link} )} />
           )}<br/>
-            </>
+            </div>
             ))}
-
+      </div>
         <Button type="submit" form="updateSocials" name="Update" />
     </form>
   )
