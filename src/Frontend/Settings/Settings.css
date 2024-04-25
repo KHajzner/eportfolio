@@ -3,3 +3,27 @@
 body{
     margin-top: 50px;
 }
+
+.settings{
+    margin: 0 auto;
+    background-color: rgba(251, 251, 75, 0.05);
+    text-align: center;
+    width: 60%;
+    padding: 30px 0;
+}
+
+
+#break{
+    background-color: var(--yellow);
+    height: 5px;
+    width: 80%;
+    margin: 0 auto 15px auto;
+    
+}
+.pageTitle{
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+#root > div > div.settings > div.MuiBox-root.css-1l0r181 > div.MuiTabs-root.MuiTabs-vertical.css-35zqo5-MuiTabs-root > div.MuiTabs-scroller.MuiTabs-hideScrollbar.MuiTabs-scrollableY.css-1cgx7kx-MuiTabs-scroller > span{
+    background-color: var(--yellow);
+}
