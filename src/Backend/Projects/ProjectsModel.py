@@ -5,17 +5,19 @@ from datetime import datetime
 class Projects(db.Model):
     __tablename__ = 'Projects'
 
-    id = db.Column(db.Integer, primary_key=True)
+    project_id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)
+    shortDes = db.Column(db.Text, nullable=False)
     body = db.Column(db.BLOB)
     date = db.Column(db.DateTime, nullable=False)
 
     def toDict(self):
-        return dict(id=self.id, title=self.title, body=self.body, date=self.date)
+        return dict(id=self.project_id, title=self.title, body=self.body, date=self.date, shortDes=self.shortDes)
     
-    def __init__(self, title, body):
+    def __init__(self, title, body, shortDes):
         self.title = title
         self.body = body
+        self.shortDes = shortDes
         self.date = datetime.now()
 
 # To Initialise (in terminal):

@@ -9,7 +9,7 @@ projects_blueprint = Blueprint('projects', __name__)
 @projects_blueprint.route('/addproject', methods=['GET', 'POST'])
 @cross_origin()
 def addProject():
-    new_post = Projects(title=request.json.get("title"), body=str.encode(request.json.get("body")))
+    new_post = Projects(title=request.json.get("title"), shortDes=request.json.get("shortDes"), body=str.encode(request.json.get("body")))
     db.session.add(new_post)
     db.session.commit() 
     print("Added project")

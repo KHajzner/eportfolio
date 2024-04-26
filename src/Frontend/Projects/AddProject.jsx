@@ -1,9 +1,13 @@
 import { useForm } from "react-hook-form";
 import { useState,  } from "react";
 import ReactQuill from 'react-quill';
+import { useNavigate } from "react-router-dom";
 import 'react-quill/dist/quill.snow.css';
 import { Button
  } from "../Button/Button";
+import './ReactQuill.css';
+import './AddProject.css';
+
 
 const AddProject = () => {
   const {
@@ -35,33 +39,46 @@ const AddProject = () => {
     
       ['clean']          
     ],
-  }
+  }  
+  let navigate = useNavigate();
 
-  const onSubmit = async title => {
-    var formData = {title: title.title, body: body};
+  const onSubmit =  data => {
+    var formData = {title: data.title, shortDes: data.shortDes, body: body};
     formData = JSON.stringify(formData);
 
-    await fetch('http://localhost:5000/addproject', {
+    fetch('http://localhost:5000/addproject', {
       method: 'post',
       mode: 'cors',
       body: formData,
       headers: {'Content-Type': 'application/json'}
+    }).then(response=>{
+      if (response.ok) {
+          navigate('/projects');
+      };
     });
   }
 
   return (
+    <div className="projectForm">
     <form onSubmit={handleSubmit(onSubmit)} id="addProject">
+    <br/><br/>
+      <label className="label">Title</label><br/><br/>
+      <input type="text" placeholder="Title" {...register("title",  { required: true })}/><br/>
+      {errors.title && <span>This field is required</span>}
 
-      <label>Title</label>
-      <input placeholder="Title" {...register("title")}/>
+      <br/><br/><br/>
 
-      <label>Description</label>
-      <ReactQuill theme="snow" value={body} onChange={setBody} modules={modules}/>
+      <label className="label">Short Description</label><br/><br/>
+      <input type="text" placeholder="Short Description" {...register("shortDes",  { required: true })}/><br/>
+      {errors.shortDes && <span>This field is required</span>}
+      <br/><br/><br/>
+      <label className="label">Description</label><br/><br/>
+      <ReactQuill value={body} onChange={setBody} modules={modules}/>
 
-      {errors.exampleRequired && <span>This field is required</span>}
-
+      <br/>
       <Button type="submit" form="addProject" name="Submit" />
     </form>
+    </div>
   )
 }
 

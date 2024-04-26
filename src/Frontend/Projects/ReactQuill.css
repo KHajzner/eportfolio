@@ -1,0 +1,60 @@
+@import "../../App.css"; 
+
+.quill{
+    color: var(--black);
+}
+.ql-editor{
+    color: var(--white);
+}
+
+.ql-toolbar .ql-stroke {
+    fill: none;
+    stroke: var(--white);
+}
+
+.ql-toolbar .ql-fill {
+    fill: var(--white);
+    stroke: none;
+}
+
+.ql-toolbar .ql-picker {
+    color: var(--white);
+}
+.ql-snow .ql-picker-options{
+    background-color: var(--black);
+    color: var(--white);
+}
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected{
+    color: var(--yellow);
+}
+button:hover .ql-stroke,
+.ql-picker-label:hover .ql-stroke {
+  fill: none;
+  stroke:var(--yellow) !important;
+}
+
+.ql-active .ql-stroke {
+  fill: none;
+  stroke: var(--yellow)  !important;
+}
+
+button:hover .ql-fill,
+.ql-picker-label:hover .ql-fill {
+  fill: var(--yellow)  !important;
+  stroke: none;
+}
+
+.ql-active .ql-fill {
+  fill: var(--yellow)  !important;
+  stroke: none;
+}
+
+.ql-picker-options{
+    color: var(--black);
+    background-color: var(--black);
+}
+
+#addProject > div.quill > div.ql-toolbar.ql-snow > span:nth-child(2) > button.ql-blockquote{
+    fill: var(--yellow)  !important;
+    stroke: none;
+}

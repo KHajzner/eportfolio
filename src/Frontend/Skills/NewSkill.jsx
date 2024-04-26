@@ -32,7 +32,7 @@ const NewSkill = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} id="addSkill">
         {!!submittedMessage && <p>{submittedMessage}</p>}
-        <label id="skillLabel">Skill</label>
+        <label className="label">Skill</label>
         <input type="text" placeholder="Skill" {...register("skill")}/>
         <Button type="submit" form="addSkill" name="Add" />
     </form>
