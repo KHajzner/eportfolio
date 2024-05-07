@@ -38,7 +38,7 @@ const Projects = () => {
           <h1>Projects</h1>
           {allProjects && 
           <div className={view + "-container"}> {allProjects.map((project) => (
-          <Card className={view + "-item"} layout={view} id={project.id} date={project.date} title={project.title} description={project.body}/>
+          <Card className={view + "-item"} layout={view} id={project.id} date={project.date} title={project.title} shortDes={project.shortDes}/>
         ))}
         </div>
       }

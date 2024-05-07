@@ -20,7 +20,7 @@ body{
 
 #grid-title{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     margin: 5px 0;
     a{
         color:  var(--white);
@@ -39,8 +39,9 @@ body{
 }
 
 #grid-description{
-    font-size: 20px;
+    font-size: 15px;
     padding: 0 5px;
+    padding-top: 2px;
 }
 
 #grid-date{

@@ -50,10 +50,9 @@ const AddSocialMedia = () => {
         <div id="allSocials">
         {mediaLinks.SocialMedia.map((item, index) => (
             <div id="singleSocial">
-              <>
-              <input className="checkbox" type="checkbox" defaultChecked={item.isVisible} id={item.Name} name={item.Name} {...register(item.Name)} /> 
-              <label id="socialLabel">{item.Name}</label></>
-              {watch(item.Name) && (<input id="urlBox" type="text" name={item.Name} placeholder={`Enter ${item.Name} URL`} {...register((item.Name + 'Link'), {value:item.Link} )} />
+              <input className="checkbox row" type="checkbox" defaultChecked={item.isVisible} id={item.Name} name={item.Name} {...register(item.Name)} /> 
+              <label id="socialLabel" className="row">{item.Name}</label>
+              {watch(item.Name) && (<input id="urlBox" className="row" type="text" name={item.Name} placeholder={`Enter ${item.Name} URL`} {...register((item.Name + 'Link'), {value:item.Link} )} />
           )}<br/>
             </div>
             ))}

@@ -58,3 +58,15 @@ button:hover .ql-fill,
     fill: var(--yellow)  !important;
     stroke: none;
 }
+#viewBody > div.quill > div > div.ql-editor > pre{
+    background-color: rgba(250, 250, 255, 0.1);
+}
+
+.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+    fill: var(--white);
+}
+
+.ql-toolbar .ql-fill {
+    fill: var(--white);
+    stroke: var(--white);
+}

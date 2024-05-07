@@ -23,7 +23,7 @@ const Posts = () => {
   return (
   <div>
     <h1>Posts</h1>
-    {allPosts && <div class="grid-container" id="wholeGrid"> {allPosts.map((post) => (
+    {allPosts && <div className="grid-container" id="wholeGrid"> {allPosts.map((post) => (
           <Card date={post.date} title={post.title} description={post.body}/>
         ))}
         </div>

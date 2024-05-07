@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 import { useNavigate } from "react-router-dom";
+import '../View/View.css';
+import { BrowserRouter } from 'react-router-dom';
 
-export const Button = ({form, type, name, redirect}) => {
+export const Button = ({className, form, type, name, redirect, click}) => {
   let navigate = useNavigate();
 
   const onClickRedirect = () =>{
@@ -17,8 +19,8 @@ export const Button = ({form, type, name, redirect}) => {
     }
   }
     return (
-      <div id="button">
-        <button form={form} type={type} value={name} onClick={onClickRedirect}>{name}</button> 
+      <div id="button" className={className} >
+        <button form={form} type={type} value={name} onClick={!!redirect ? onClickRedirect : click}>{name}</button> 
       </div>
   );
 };
@@ -32,5 +34,5 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: "button",
-  name: "default",
+  name: "Submit",
 };

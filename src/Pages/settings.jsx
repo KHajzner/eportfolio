@@ -1,10 +1,9 @@
-
+import Settings from "../Frontend/Settings/Settings";
 import React, { useState } from "react";
 import bcrypt from 'bcryptjs'
 import "../Frontend/SocialMedia/AddSocialMedia.css";
-import AddPost from "../Frontend/Posts/AddPost";
 
-const AddPostPage = () => {
+const SettingsPage = () => {
  
     const [isAdmin, setIsAdmin] = useState(false);
 
@@ -22,7 +21,7 @@ const AddPostPage = () => {
   
    return (
     <>
-        {isAdmin ? <AddPost />
+        {isAdmin ? <Settings />
         :
         (
         <form id="passwordForm" onSubmit={checkPassword}>
@@ -35,4 +34,4 @@ const AddPostPage = () => {
    );
   };
   
-export default AddPostPage;
+export default SettingsPage;

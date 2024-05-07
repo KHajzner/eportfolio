@@ -61,20 +61,20 @@ const Settings = () => {
     return (
     <div className="settings">
         <Box sx={{ flexGrow: 1, display: 'flex'}}>
-        <TabContext value={value}>
-        <Tabs variant="scrollable" value={value} onChange={handleChange} orientation="vertical"
-         textColor="inherit"
-        sx={{ borderRight: 1, borderColor: 'divider' }}>
-            
-                <Tab label="Content" value="1" />
-                <Tab label="Layout" value="2" />
-                <Tab label="Other" value="3" />
-            </Tabs>
-        <TabPanel value="1"><ContentManagement /></TabPanel>
-        <TabPanel value="2"><LayoutManagement /></TabPanel>
-        <TabPanel value="3"><Miscellaneous/></TabPanel>
-      </TabContext>
-    </Box>
+            <TabContext value={value}>
+                <Tabs variant="scrollable" value={value} onChange={handleChange} orientation="vertical"
+                textColor="inherit"
+                sx={{ borderRight: 1, borderColor: 'divider' }}>
+                    
+                    <Tab label="Content" value="1" />
+                    <Tab label="Layout" value="2" />
+                    <Tab label="Other" value="3" />
+                </Tabs>
+                <TabPanel value="1"><ContentManagement /></TabPanel>
+                <TabPanel value="2"><LayoutManagement /></TabPanel>
+                <TabPanel value="3"><Miscellaneous/></TabPanel>
+            </TabContext>
+        </Box>
     </ div>
     );
 };

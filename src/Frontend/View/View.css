@@ -1,0 +1,32 @@
+@import "../../App.css"; 
+#viewContent{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+#viewDate{
+    border-bottom: 2px var(--white) solid;
+    padding: 0 10px;
+    width: 100%;
+    display: inline;
+    margin-bottom: 20px;
+}
+#viewBody{
+
+}
+#viewTitle{
+    font-size: 30px;
+    margin-top: 10px;
+}
+#viewShortDescription{
+
+}
+
+#viewBody > div.quill > div{
+    border: none;
+    padding: 5px;
+}
+
+.hello{
+    text-align: center;
+}

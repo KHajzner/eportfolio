@@ -3,7 +3,6 @@ import { useState, useEffect  } from "react";
 import 'react-quill/dist/quill.snow.css';
 import { Button
  } from "../Button/Button";
- import { Document, Page } from 'react-pdf'
 
 const CV = () => {
   const {
@@ -56,8 +55,6 @@ const CV = () => {
           <input type="file" accept="application/pdf"  {...register("CV")}/>
           <Button type="submit" form="uploadCV" name="Submit" />
           </form>
-      {allCVs && <Document file={{data: allCVs}}>
-      <Page pageNumber={1} /> </Document>}
       </div>
     )
   }

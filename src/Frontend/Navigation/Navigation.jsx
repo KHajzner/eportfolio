@@ -6,13 +6,9 @@ const Navigation = () => {
     return (
         <div className="navigation">
             <div className="links">
-                <Link to="/">
-                        K.Hajzner
-                    </Link>
-                    <Link to="/cv">
-                        CV
-                    </Link>    
-                    <Link to="/posts">
+                <Link to="/">K.Hajzner</Link>
+                <Link to="/cv">CV</Link>    
+                <Link to="/posts">
                         Posts
                     </Link>
                     <Link to="/projects">

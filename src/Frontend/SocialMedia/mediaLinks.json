@@ -4,14 +4,14 @@
             "Name": "Instagram",
             "Icon": "instagram.png",
             "Link": "",
-            "isVisible": false,
+            "isVisible": true,
             "IconAuthor": "Freepik"
         },
         {
             "Name": "LinkedIn",
             "Icon": "linkedin.png",
-            "Link": "linkedin.com",
-            "isVisible": false,
+            "Link": "https://www.linkedin.com/in/kalina-hajzner-386a4222b/",
+            "isVisible": true,
             "IconAuthor": "Freepik"
         },
         {
@@ -25,14 +25,14 @@
             "Name": "GitLab",
             "Icon": "gitlab.png",
             "Link": "",
-            "isVisible": true,
+            "isVisible": false,
             "IconAuthor": "Freepik"
         },
         {
             "Name": "X",
             "Icon": "twitter.png",
             "Link": "sd aweaew",
-            "isVisible": true,
+            "isVisible": false,
             "IconAuthor": "Freepik"
         },
         {
@@ -46,7 +46,7 @@
             "Name": "Email",
             "Icon": "email.png",
             "Link": "testemail@gmail.com",
-            "isVisible": false,
+            "isVisible": true,
             "IconAuthor": "Freepik"
         }
     ]

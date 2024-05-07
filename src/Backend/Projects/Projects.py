@@ -29,7 +29,7 @@ def allProjects():
 @projects_blueprint.route('/view/<int:id>', methods=['GET', 'POST'])
 @cross_origin()
 def viewProject(id):
-    project = Projects.query.filter_by(id=id).first()
+    project = Projects.query.filter_by(project_id=id).first()
     project = project.toDict()
     project['body'] = project['body'].decode('utf-8')
     if not project:
